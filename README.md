@@ -28,3 +28,47 @@ TUC/QCT propone que la física conocida surge de una condición basal llamada **
 ---
 
 ## 📂 Estructura principalp
+
+---
+
+## 💡 Idea central
+
+> *La coherencia no es un efecto, sino la causa organizativa del universo.*  
+> El tiempo, la masa, la estabilidad y las interacciones emergen como proyecciones de estructuras de coherencia.
+
+---
+
+## 🧪 Contenido computacional
+
+Los modelos numéricos incluidos permiten:
+
+- evaluar métricas de coherencia,
+- simular evolución bajo reglas TUC,
+- verificar periodicidades predichas (~3.4 años),
+- explorar estabilidad del Cero Coherente,
+- generar mapas de coherencia.
+
+---
+
+## 🧒 Explicaciones para niños
+
+En `examples/for_kids/` encontrarás historias, modelos conceptuales y analogías que explican la teoría para estudiantes jóvenes de forma sencilla y visual.
+
+---
+
+## 🔧 Requisitos (Python)
+
+- Python ≥ 3.10  
+- NumPy  
+- SciPy  
+- Matplotlib  
+- Jupyter opcional
+
+---
+
+## 📜 Licencia
+
+MIT License – uso libre para investigación.
+
+---
+
