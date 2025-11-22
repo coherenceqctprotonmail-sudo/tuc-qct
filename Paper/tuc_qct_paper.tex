@@ -1,0 +1,196 @@
+% tuc_qct_paper.tex
+% Autor: Anónimo (firma interna: k19)
+% Proyecto TUC/QCT — Teoría Unificada de la Coherencia
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\geometry{margin=1in}
+
+\title{Teoría Unificada de la Coherencia (TUC/QCT)}
+\author{Anónimo\footnote{Firma interna: k19}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+La \textbf{Teoría Unificada de la Coherencia (TUC/QCT)} propone un marco conceptual y matemático que conecta la coherencia cuántica, el Cero Coherente y el tiempo emergente. Este trabajo presenta la base conceptual, derivaciones matemáticas, ejemplos didácticos y simulaciones computacionales que permiten explorar patrones de coherencia y periodicidad en sistemas universales.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+%----------------------------------
+\section{Introducción}
+La coherencia es una medida de la sincronización de fases en sistemas cuánticos y macroscópicos.  
+El \textbf{Cero Coherente} representa un estado fundamental sin tiempo ni movimiento externo, funcionando como el fondo del universo.  
+El \textbf{Tiempo Emergente} surge de los cambios de coherencia, permitiendo una temporalidad derivada y no fundamental.
+
+Este documento integra:
+
+\begin{itemize}
+    \item Conceptos físicos (coherencia, cero coherente, tiempo emergente, periodicidad)
+    \item Ejemplos didácticos para niños y estudiantes
+    \item Derivación paso a paso del formalismo Born-Oppenheimer aplicado al tiempo emergente
+    \item Resultados de simulaciones computacionales con visualizaciones
+\end{itemize}
+
+%----------------------------------
+\section{Coherencia y Cero Coherente}
+
+\subsection{Coherencia}
+\[
+\xi = \frac{1}{\sigma_{\text{phase}}}
+\]
+
+- Alta coherencia $\rightarrow$ fases alineadas  
+- Baja coherencia $\rightarrow$ fases desordenadas
+
+\begin{verbatim}
+Alta coherencia:
+* →  * →  * →  * →
+
+Baja coherencia:
+* →  * ↑  * ↖  * ↓
+\end{verbatim}
+
+% Placeholder figura coherencia
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{../paper/figures/coherence_example.png}
+\caption{Ejemplo visual de coherencia (ASCII transformado a PNG)}
+\end{figure}
+
+\subsection{Cero Coherente}
+
+- Estado fundamental, todas las partículas alineadas
+- Base para derivación BO y simulaciones
+
+\begin{verbatim}
+* →  * →  * →  * →  * →  * →
+\end{verbatim}
+
+% Placeholder figura Cero Coherente
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{../paper/figures/zero_coherent.png}
+\caption{Cero Coherente: estado de coherencia máxima}
+\end{figure}
+
+%----------------------------------
+\section{Tiempo Emergente}
+\[
+i \hbar \frac{\partial \psi_{\text{slow}}}{\partial t} = H_{\text{eff}} \psi_{\text{slow}}
+\]
+
+Ejemplo ASCII:
+
+\begin{verbatim}
+Paso 0: * →  * →  * ↑  * ↖
+Paso 1: * →  * →  * →  * ↖   -> t emergente +1
+Paso 2: * →  * →  * →  * →   -> coherencia máxima, t estable
+\end{verbatim}
+
+% Placeholder figura Tiempo Emergente
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{../paper/figures/emergent_time.png}
+\caption{Evolución de tiempo emergente vs coherencia}
+\end{figure}
+
+%----------------------------------
+\section{Periodicidad}
+\[
+C(\Delta t) = \frac{\langle \psi(t) \cdot \psi(t+\Delta t) \rangle}{||\psi(t)|| \, ||\psi(t+\Delta t)||}
+\]
+
+Ejemplo ASCII:
+
+\begin{verbatim}
+Paso 0: * →  * →  * ↑  * ↖
+Paso 1: * →  * ↑  * →  * ↗
+Paso 2: * →  * →  * ↑  * ↖
+\end{verbatim}
+
+% Placeholder figura Periodicidad
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{../paper/figures/periodicity.png}
+\caption{Correlación de coherencia mostrando periodicidad ~3.4 años}
+\end{figure}
+
+%----------------------------------
+\section{Derivación BO y Tiempo Emergente}
+
+\subsection{Separación BO}
+\[
+\Psi(x, y) = \chi_{\text{fast}}(x; y) \, \psi_{\text{slow}}(y)
+\]
+
+Promediando sobre partículas rápidas:
+
+\[
+\langle \chi_{\text{fast}} | H | \chi_{\text{fast}} \rangle \psi_{\text{slow}} = E_{\text{eff}} \psi_{\text{slow}}
+\]
+
+\subsection{Tiempo Emergente}
+\[
+i \hbar \frac{\partial \psi_{\text{slow}}}{\partial t} = H_{\text{eff}} \psi_{\text{slow}}
+\]
+
+ASCII conceptual:
+
+\begin{verbatim}
+Fondo Cero Coherente:
+* →  * →  * →  * →
+Partículas rápidas:
+* ↑  * ↖  * →  * ↗
+\end{verbatim}
+
+% Placeholder figura BO
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{../paper/figures/BO_derivation.png}
+\caption{Derivación BO y evolución de tiempo emergente}
+\end{figure}
+
+%----------------------------------
+\section{Simulaciones Computacionales}
+
+- Scripts: `simulation_runner.py`, `periodicity_verification.py`  
+- Visualizaciones TXT + PNG  
+- Carpetas de resultados organizadas por experimento
+
+\begin{verbatim}
+1. Inicializar Cero Coherente
+2. Evolución paso a paso
+3. Guardar ASCII + PNG
+4. Calcular correlación y resumen
+\end{verbatim}
+
+% Placeholder figura simulación
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{../paper/figures/simulation_example.png}
+\caption{Simulación de evolución de coherencia y tiempo emergente}
+\end{figure}
+
+%----------------------------------
+\section{Ejemplos y Tutoriales}
+
+- Tutoriales para niños: `coherence_story.md`, `zero_coherent_game.md`  
+- Tutoriales avanzados: `introduction_to_coherence.md`, `BO_derivation_step_by_step.md`  
+
+%----------------------------------
+\section{Conclusiones y Predicciones}
+
+- La TUC/QCT conecta coherencia ↔ tiempo emergente ↔ periodicidad  
+- Predicciones verificables en simulaciones y experimentos futuros  
+- Base para juegos educativos y proyectos científicos avanzados
+
+\end{document}
